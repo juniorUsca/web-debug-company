@@ -9,5 +9,15 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /images/(.*) 
+  static_files: web/images/\1 
+  upload: web/images/(.*) 
+- url: /css/(.*) 
+  static_files: web/css/\1 
+  upload: web/css/(.*)
+- url: /js/(.*) 
+  static_files: web/js/\1 
+  upload: web/js/(.*) 
+
 - url: .*
   script: index.php
