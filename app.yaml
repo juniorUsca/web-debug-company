@@ -1,5 +1,5 @@
 application: debug-company
-version: 2
+version: alpha-001
 runtime: php55
 api_version: 1
 threadsafe: yes
@@ -8,6 +8,36 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+
+- url: /web/images/(.*)
+  static_files: web/images/\1
+  upload: web/images/.*
+- url: /web/css/(.*)
+  static_files: web/css/\1
+  upload: web/css/.*
+- url: /web/js/(.*)
+  static_files: web/js/\1
+  upload: web/js/.*
+
+- url: /mobile/images/(.*)
+  static_files: mobile/images/\1
+  upload: mobile/images/.*
+- url: /mobile/css/(.*)
+  static_files: mobile/css/\1
+  upload: mobile/css/.*
+- url: /mobile/js/(.*)
+  static_files: mobile/js/\1
+  upload: mobile/js/.*
+
+- url: /smartphone/images/(.*)
+  static_files: smartphone/images/\1
+  upload: smartphone/images/.*
+- url: /smartphone/css/(.*)
+  static_files: smartphone/css/\1
+  upload: smartphone/css/.*
+- url: /smartphone/js/(.*)
+  static_files: smartphone/js/\1
+  upload: smartphone/js/.*
 
 - url: .*
   script: index.php
